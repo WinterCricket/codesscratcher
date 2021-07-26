@@ -1,6 +1,10 @@
 // let cards = [3, 9];
-// console.log(cards);
 
+// cards.push(5)
+
+// for (let i = 0; i <= cards.length; i ++ 1) {
+// 	console.log(cards[i]);
+// }
 
 // let cardsEl = document.getElementById("cards-el");
 // let messagesEl = document.getElementById("messages-el");
@@ -16,15 +20,11 @@
 
 
 //for loops for counting
-let messages = [
-	" I provide free SEO evaluation on your front page",
-	" I provide sadness insurance for those who are suddenly old",
-	"The homeless family in Portland.",
-	"That made me escape and avoid, and my brother suicide."
-]
+let sentence = ["Someone", "can help me", "if I'm", "drowning!"];
+let greetingEl = document.getElementById("greeting-el");
 
-
-
-for( let i = 0; i <= messages.length; i += 1){
-	console.log(messages[i]);
+for (let i = 0; i < sentence.length; i++){
+	
+	greetingEl.textContent += sentence[i].split(" ");
 }
+
