@@ -17,14 +17,13 @@
 
 
 
+//logical AND operators
 
+let buysSas = true;
+let sasShipped = true;
 
-//for loops for counting
-let sentence = ["Someone", "can help me", "if I'm", "drowning!"];
-let greetingEl = document.getElementById("greeting-el");
-
-for (let i = 0; i < sentence.length; i++){
-	
-	greetingEl.textContent += sentence[i] + " ";
+function generateSas(){
+	console.log("we're building your sas now");
 }
 
+generateSas();
