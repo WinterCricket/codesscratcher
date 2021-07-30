@@ -18,13 +18,15 @@ let solvEl = document.getElementById("solv-el");
 
 //logical AND operators
 let hasSolved = true;
-let hasHintsLeft = false;
+let hasHintsLeft = true;
 let message = "You're an idiot, so we're giving you the solution now...";
 function giveStudentSolution(){
 	if(hasSolved === false && hasHintsLeft === false){
 		solvEl.textContent = message;
-	} else {
+	} else if(hasSolved === false && hasHintsLeft || hasSolved && hasHintsLeft === false){
 		solvEl.textContent = "You're almost there. Keep trying.";
+	} else {
+		solvEl.textContent = "So, smart ass, you've solved it. Now what?";
 	}
 }
 giveStudentSolution();
