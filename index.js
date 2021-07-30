@@ -18,7 +18,7 @@
 
 //logical AND operators
 
-let completeMFA = false;
+let completeMFA = true;
 let awardMFA = true;
 let messagesEl = document.getElementById("messages-el");
 
@@ -26,14 +26,13 @@ function generateCertificate(){
 	messagesEl.textContent = "we're assembling your full MFA with transcipt";
 
 
-if(completeMFA === true && awardMFA === true){
-	generateCertificate();
-} else {
-	messagesEl.textContent = "Your attempt is incomplete. Pay another 20k and try again.";
-}
+	if(completeMFA && awardMFA ){
+		generateCertificate();
+	} else {
+		messagesEl.textContent = "Your attempt is incomplete. Pay another 20k and try again.";
+	}
 
 }
 
 generateCertificate();
 
-console.log(generateCertificate());
