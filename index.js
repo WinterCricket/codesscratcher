@@ -10,29 +10,21 @@
  // let messagesEl = document.getElementById("messages-el");
 // console.log(cardsEl);
 // cardsEl.textContent = "Cards here: " + cards.push(44);
- //messagesEl.textContent = "Messages here: " + messages;
+ //messagesEl.textContent = "Showing solutions here: " + messages;
 
  //messages.push(newMessage);
 
-
+let solvEl = document.getElementById("solv-el");
 
 //logical AND operators
-
-let completeMFA = true;
-let awardMFA = true;
-let messagesEl = document.getElementById("messages-el");
-
-function generateCertificate(){
-	messagesEl.textContent = "we're assembling your full MFA with transcipt";
-
-
-	if(completeMFA && awardMFA ){
-		generateCertificate();
+let hasSolved = true;
+let hasHintsLeft = false;
+let message = "You're an idiot, so we're giving you the solution now...";
+function giveStudentSolution(){
+	if(hasSolved === false && hasHintsLeft === false){
+		solvEl.textContent = message;
 	} else {
-		messagesEl.textContent = "Your attempt is incomplete. Pay another 20k and try again.";
+		solvEl.textContent = "You're almost there. Keep trying.";
 	}
-
 }
-
-generateCertificate();
-
+giveStudentSolution();
