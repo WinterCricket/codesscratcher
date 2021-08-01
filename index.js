@@ -61,15 +61,28 @@
 // }
 
 // messagesEl.textContent = "Translate Arabic to Roman: "+convertToRoman(2021);
-
-let likeDocs = false;
-let likeStart = false;
-
-function recommendFilm(){
-	if(likeDocs ===true ||likeStart === true){
-		return "Watch Star Wars when you're sick and tired of your job.";
-	} else {
-		 return "I've nothing to recommend, except that you grow up.";
+let A = [1,2,3,4,5,6,7];
+let K = 3;
+function solution(A, K){
+	if(K%A.length == 0)
+		return A
+	 else {
+		K = K%A.length;
 	}
+
+	let newA = [];
+	let AIdx = 0;
+
+	for(let i = K; i < A.length; i++){
+		newA[i] = A[AIdx];
+		AIdx++;
+	}
+
+	for(let i=0; i<K; i++){
+		newA[i] = A[AIdx];
+		AIdx++;
+	}
+
+	return newA;
 }
-messagesEl.textContent = recommendFilm();
+messagesEl.textContent = solution(A,K);
