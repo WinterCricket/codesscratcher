@@ -61,28 +61,30 @@
 // }
 
 // messagesEl.textContent = "Translate Arabic to Roman: "+convertToRoman(2021);
-let A = [1,2,3,4,5,6,7];
-let K = 3;
-function solution(A, K){
-	if(K%A.length == 0)
-		return A
-	 else {
-		K = K%A.length;
-	}
+// let A = [1,2,3,4,5,6,7];
+// let K = 3;
+// function solution(A, K){
+// 	if(K%A.length == 0)
+// 		return A
+// 	 else {
+// 		K = K%A.length;
+// 	}
 
-	let newA = [];
-	let AIdx = 0;
+// 	let newA = [];
+// 	let AIndex = 0;
 
-	for(let i = K; i < A.length; i++){
-		newA[i] = A[AIdx];
-		AIdx++;
-	}
+// 	for(let i = K; i < A.length; i++){
+// 		newA[i] = A[AIndex];
+// 		AIndex++;
+// 	}
 
-	for(let i=0; i<K; i++){
-		newA[i] = A[AIdx];
-		AIdx++;
-	}
+// 	for(let i=0; i<K; i++){
+// 		newA[i] = A[AIndex];
+// 		AIndex++;
+// 	}
 
-	return newA;
-}
-messagesEl.textContent = solution(A,K);
+// 	return newA;
+// }
+// messagesEl.textContent = solution(A,K);
+
+messagesEl.textContent = 9%5 + " = K/A.length is 0 or K - A*n if AN is less than K";
