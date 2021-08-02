@@ -87,4 +87,32 @@
 // }
 // messagesEl.textContent = solution(A,K);
 
-messagesEl.textContent = 9%5 + " = K/A.length is 0 or K - A*n if AN is less than K";
+let castles = [
+
+	
+		{
+		name: "Mount Lake",
+		price: 144,
+		pets: false
+					},
+	
+	
+		{
+		name: "Bourbon Street Castle",
+		price: 89,
+		pets: false
+					},
+	
+		{
+		name: "Chevoix",
+		price: 222,
+		pets: true
+					}
+	
+]
+
+for(let i = 0; i < castles.length; i++){
+	messagesEl.textContent += castles[i] ;
+}
+
+// messagesEl.textContent = "$"+castles.length;
