@@ -112,7 +112,7 @@ let castles = [
 ]
 
 for(let i = 0; i < castles.length; i++){
-	messagesEl.textContent += castles[i] ;
+	messagesEl.textContent += castles[i].name +"/  " ;
 }
 
 // messagesEl.textContent = "$"+castles.length;
