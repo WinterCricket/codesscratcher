@@ -8,16 +8,22 @@
 
 // let cardsEl = document.getElementById("cards-el");
  let messagesEl = document.getElementById("messages-el");
+messagesEl.textContent;
+let age = 23;
 
-let person = {
-	name: "Todd",
-	age: 169,
-	country: "United States"
-	
+if(age < 6){
+	messagesEl.textContent = "Let travel for free!";
+}else if(age < 18){
+	messagesEl.textContent = "Give child discount.";
+}else if(age < 27){
+	messagesEl.textContent = "Give student discount.";
+}else if (age > 66){
+	messagesEl.textContent = "Give senior discount.";
+} else {
+	messagesEl.textContent = "Charge full price.";
 }
 
-function logData(){
-	return messagesEl.textContent = person.name+" is "+person.age+ " years old, and is from "+person.country+".";
 
-}
-logData();
+
+
+
