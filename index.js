@@ -87,32 +87,12 @@
 // }
 // messagesEl.textContent = solution(A,K);
 
-let castles = [
-
-	
-		{
-		name: "Mount Lake",
-		price: 144,
-		pets: false
-					},
-	
-	
-		{
-		name: "Bourbon Street Castle",
-		price: 89,
-		pets: false
-					},
-	
-		{
-		name: "Chevoix",
-		price: 222,
-		pets: true
-					}
-	
-]
-
-for(let i = 0; i < castles.length; i++){
-	messagesEl.textContent += castles[i].name +": $"+castles[i].price +"/  ";
+let castleBB = {
+	name: "Montego",
+	price: 433,
+	pets: false,
+	amenities: ["flowers", "beer", "ice cream"]
 }
 
-// messagesEl.textContent = "$"+castles.length;
+
+messagesEl.textContent = "Name and amenities: "+castleBB.name+" has "+ castleBB.amenities;
