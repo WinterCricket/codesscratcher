@@ -13,11 +13,11 @@
 // }
 // showHand();
 
-let fruit = ["orange", "red", "red", "orange", "red", "orange"];
+let fruit = ["orange", "red", "red","blue", "orange", "red", "orange","blue"];
 
 let redShelf = document.getElementById("red-shelf");
 let orangeShelf = document.getElementById("orange-shelf");
-
+let blueShelf = document.getElementById("blue-shelf");
 
 
 
@@ -26,7 +26,10 @@ for (let i = 0; i < fruit.length; i++){
 	if(fruit[i] === "orange"){
 		orangeShelf.textContent += fruit[i] +"  ";
 	}
-	 else {
+	 else if(fruit[i] === "red"){
 	redShelf.textContent += fruit[i] + "  ";
+	}
+	else if (fruit[i] === "blue"){
+		blueShelf.textContent += fruit[i] + "  ";
 	}
 }
