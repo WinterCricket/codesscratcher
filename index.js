@@ -40,11 +40,11 @@
 // }
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-demoEl = document.getElementById("demo");
+document.getElementById("demo");
 let text = "<ul>";
-for(let i = 0; i < fruits.length; i++){
-	text += "<li>" + fruits[i] + "</li>";
-}
+fruits.forEach(myFunction);
+document.getElementById("demo").innerHTML = text;
 text += "<ul>";
-
-demoEl.innerHTML = text;//need to use innerHTML instead of textContent
+ function myFunction(val){
+ 	text += "<li>" + val + "</li>";
+ }
