@@ -7,23 +7,16 @@
 // }
 
 // let cardsEl = document.getElementById("cards-el");
- let messagesEl = document.getElementById("messages-el");
-messagesEl.textContent;
-let age = 23;
+// let largestCountries = [];
 
-if(age < 6){
-	messagesEl.textContent = "Let travel for free!";
-}else if(age < 18){
-	messagesEl.textContent = "Give child discount.";
-}else if(age < 27){
-	messagesEl.textContent = "Give student discount.";
-}else if (age > 66){
-	messagesEl.textContent = "Give senior discount.";
-} else {
-	messagesEl.textContent = "Charge full price.";
+
+
+
+let largestCountries = ["China", "India", "USA", "Indonesia", "Pakistan"];
+let messagesEl = document.getElementById("messages-el");
+for(let i = 0; i < largestCountries.length; i++){
+	messagesEl.textContent += "- "+largestCountries[i];
 }
-
-
 
 
 
