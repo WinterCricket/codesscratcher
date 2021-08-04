@@ -15,14 +15,18 @@
 
 let fruit = ["orange", "red", "red","blue", "orange", "red", "orange","blue"];
 
+
+
+
+
+
+
+
+console.log(fruit);
 let redShelf = document.getElementById("red-shelf");
 let orangeShelf = document.getElementById("orange-shelf");
 let blueShelf = document.getElementById("blue-shelf");
 let miscShelf = document.getElementById("misc-shelf");
-
-
-
-function addFruit(){
 
 for (let i = 0; i < fruit.length; i++){
 	if(fruit[i] === "orange"){
@@ -34,16 +38,22 @@ for (let i = 0; i < fruit.length; i++){
 	else if (fruit[i] === "blue"){
 		blueShelf.textContent += fruit[i] + "  ";
 	} else {
-		miscShelf.textContent += fruit[i] +"  ";
+		
+		miscShelf.textContent = fruit[i] +"  ";
 	}
+	
 }
 
-
-
+function addFruit(){
 	fruit.push("black");
-	miscShelf.textContent += fruit[i]+ "  ";
+	miscShelf.textContent = fruit;
 }
-addFruit();
+
+
+
+	
+	
+
 
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
