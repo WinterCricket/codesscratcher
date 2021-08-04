@@ -24,9 +24,9 @@ let orangeShelf = document.getElementById("orange-shelf");
 
 for (let i = 0; i < fruit.length; i++){
 	if(fruit[i] === "orange"){
-		console.log(fruit[i]);
+		orangeShelf.textContent += fruit[i] +"  ";
 	}
 	 else {
-		console.log(fruit[i]);
+	redShelf.textContent += fruit[i] + "  ";
 	}
 }
