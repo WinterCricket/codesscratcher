@@ -1,9 +1,14 @@
-let dayOfMonth = 31;
-let weekday = "Friday";
-let messagesEl = document.getElementById("messages-el");
-if(dayOfMonth === 13 && weekday === "Friday"){
-	messagesEl.textContent = "Boooooo!";
-} else{
-	messagesEl.textContent = "Good day!";
-}
+// rock, paper, scissors
+let hands = ["rock", "paper", "scissors"];
 
+messagesEl = document.getElementById("messages-el");
+
+function showHand(){
+
+let randomNumber = Math.floor(Math.random()*3);
+
+console.log(hands[randomNumber]);
+
+
+}
+showHand();
