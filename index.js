@@ -7,7 +7,7 @@ function showHand(){
 
 let randomNumber = Math.floor(Math.random()*3);
 
-console.log(hands[randomNumber]);
+messagesEl.textContent = hands[randomNumber];
 
 
 }
