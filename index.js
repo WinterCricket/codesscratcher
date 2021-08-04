@@ -13,38 +13,45 @@
 // }
 // showHand();
 
-// let fruit = ["orange", "red", "red","blue", "orange", "red", "orange","blue"];
+let fruit = ["orange", "red", "red","blue", "orange", "red", "orange","blue"];
 
-// let redShelf = document.getElementById("red-shelf");
-// let orangeShelf = document.getElementById("orange-shelf");
-// let blueShelf = document.getElementById("blue-shelf");
-// let miscShelf = document.getElementById("misc-shelf");
-
-// fruit[0] = "green";
-// fruit[fruit.length] = "purple";
-// fruit.push("yellow");
+let redShelf = document.getElementById("red-shelf");
+let orangeShelf = document.getElementById("orange-shelf");
+let blueShelf = document.getElementById("blue-shelf");
+let miscShelf = document.getElementById("misc-shelf");
 
 
-// for (let i = 0; i < fruit.length; i++){
-// 	if(fruit[i] === "orange"){
-// 		orangeShelf.textContent += fruit[i] +"  ";
-// 	}
-// 	 else if(fruit[i] === "red"){
-// 	redShelf.textContent += fruit[i] + "  ";
-// 	}
-// 	else if (fruit[i] === "blue"){
-// 		blueShelf.textContent += fruit[i] + "  ";
-// 	} else {
-// 		miscShelf.textContent += fruit[i] +"  ";
-// 	}
-// }
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo");
-let text = "<ul>";
-fruits.forEach(myFunction);
-document.getElementById("demo").innerHTML = text;
-text += "<ul>";
- function myFunction(val){
- 	text += "<li>" + val + "</li>";
- }
+function addFruit(){
+
+for (let i = 0; i < fruit.length; i++){
+	if(fruit[i] === "orange"){
+		orangeShelf.textContent += fruit[i] +"  ";
+	}
+	 else if(fruit[i] === "red"){
+	redShelf.textContent += fruit[i] + "  ";
+	}
+	else if (fruit[i] === "blue"){
+		blueShelf.textContent += fruit[i] + "  ";
+	} else {
+		miscShelf.textContent += fruit[i] +"  ";
+	}
+}
+
+
+
+	fruit.push("black");
+	miscShelf.textContent += fruit[i]+ "  ";
+}
+addFruit();
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo");
+// let text = "<ul>";
+// fruits.forEach(myFunction);
+// document.getElementById("demo").innerHTML = text;
+// text += "<ul>";
+//  function myFunction(val){
+//  	text += "<li>" + val + "</li>";
+//  }
