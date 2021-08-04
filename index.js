@@ -12,11 +12,18 @@
 
 
 
-let largestCountries = ["China", "India", "USA", "Indonesia", "Pakistan"];
+let largestCountries = ["Doo", "India", "USA", "Indonesia", "Daa"];
+largestCountries.shift();
+largestCountries.unshift("China");
+largestCountries.pop();
+largestCountries.push("Pakistan");
 let messagesEl = document.getElementById("messages-el");
 for(let i = 0; i < largestCountries.length; i++){
-	messagesEl.textContent += "- "+largestCountries[i];
-}
 
+	messagesEl.textContent += "- "+largestCountries[i];
+	//largestCountries.shift();
+	
+
+}
 
 
