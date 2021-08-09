@@ -1,8 +1,7 @@
 
 
-let box = document.getElementById("box");
+const recipient = "Lordly Fly Opener"
+const email = `
+Hi, ${recipient}! What are you doing?`
 
-box.addEventListener("click", function(){
-	console.log("I want to open the box!");
-})
-
+console.log(email)
