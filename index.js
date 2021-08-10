@@ -1,15 +1,11 @@
 
 
 
+const welcomeEl = document.getElementById("welcome-el")
 
-const greetEl = document.getElementById("greet-el")
+// Give the function a parameter, greeting, that replaces "Welcome back"
+function greetUser(greeting) {
+    welcomeEl.textContent = greeting+", Per Harald Borgen 👋"    
+}
 
-const recipient = "Lordly Fly Opener"
-const sender = "Traveler Home"
-const email = `
-	Hi, ${recipient}! 
-	What are you doing?
-	Bonzai, ${sender}!
-`
-console.log(email)
-greetEl.textContent = email
+greetUser("Flog it")
