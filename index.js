@@ -3,12 +3,12 @@
 
 const domEl = document.getElementById("dom-el")
 
-function adder(a, b){
-    let c = a + b
-    c = c.toString()
-    domEl.textContent = c
-    
-    
+function getFirst(arr){
+    let first = arr[0]
+    first = first.toString()
+    domEl.textContent = first
+
 }
 
-adder(33, 19)
+getFirst([4,7,8])
+
