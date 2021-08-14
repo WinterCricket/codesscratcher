@@ -1,11 +1,14 @@
 
 
 
-const welcomeEl = document.getElementById("welcome-el")
+const domEl = document.getElementById("dom-el")
 
-// Give the function a parameter, greeting, that replaces "Welcome back"
-function greetUser(greeting, name, emoji) {
-    welcomeEl.textContent = `${greeting} , ${name} ${emoji}`    
+function adder(a, b){
+    let c = a + b
+    c = c.toString()
+    domEl.textContent = c
+    
+    
 }
 
-greetUser("Flog it", "Juniper June", "⌚")
+adder(33, 19)
