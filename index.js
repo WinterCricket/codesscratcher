@@ -7,10 +7,20 @@ const myCourses = ["Creative Writing for Geniuses", "Coding for Literary Minds "
 const yourCourses = ["Pucker Up: How to Succeed ", "Business Cycles ", "Make Artists Cry "]
 
 function listCourses(arr){
+    let listItems = ""
+    for(let i =0; i < arr.length; i++){
+        listItems += `
 
-    arr = arr.toString()
-    domEl.textContent = arr
+        <li>
+            ${arr[i]}
+
+        </li>
+
+        `
+       
+    }
+    domEl.innerHTML =listItems
 }
 
 
-listCourses(myCourses)
+listCourses(yourCourses)
