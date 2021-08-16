@@ -3,15 +3,15 @@
 
 const domEl = document.getElementById("dom-el")
 
-//const valuation = "This is a value, I suppose."
+//const valuation = "This is a value, I suppos
 
-//console.log(valuation)
- const myCourses = ["How to Fly", "How to Let Go"]
+// const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 
- localStorage.setItem("myCourses", JSON.stringify(myCourses))
-//const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
- domEl.textContent = myCourses
+// domEl.textContent = leadsFromLocalStorage
 
+const flight = JSON.parse( localStorage.getItem("myCourses") )
+flight.push("Knock around bankrupt country")
+domEl.textContent = flight
 
 
 
