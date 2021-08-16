@@ -10,8 +10,22 @@ const domEl = document.getElementById("dom-el")
 // domEl.textContent = leadsFromLocalStorage
 
 const flight = JSON.parse( localStorage.getItem("myCourses") )
-flight.push("Knock around bankrupt country")
-domEl.textContent = flight
+listItems = ""
+for (let i = 0; i < flight.length; i++){
+    listItems += `
+        <li>
+
+            ${flight[i]}
+
+        </li>
+
+    `
+
+}
+
+
+
+domEl.innerHTML = listItems
 
 
 
