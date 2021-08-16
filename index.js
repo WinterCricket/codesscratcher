@@ -4,7 +4,7 @@
 const domEl = document.getElementById("dom-el")
 
 const myCourses = ["Creative Writing for Geniuses", "Coding for Literary Minds ", "UI Design Fundamentals "]
-const yourCourses = ["Pucker Up: How to Succeed ", "Business Cycles ", "Make Artists Cry "]
+
 
 function listCourses(arr){
     let listItems = ""
@@ -23,4 +23,15 @@ function listCourses(arr){
 }
 
 
-listCourses(yourCourses)
+myCourses.push("Claudius was a Wanker!")
+
+localStorage.setItem("myCourses", JSON.stringify(myCourses))
+listCourses(myCourses)
+
+
+// inputBtn.addEventListener("click", function() {
+//     myLeads.push(inputEl.value)
+//     inputEl.value = ""
+//     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+//     render(myLeads)
+// })
