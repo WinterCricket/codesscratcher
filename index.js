@@ -3,35 +3,16 @@
 
 const domEl = document.getElementById("dom-el")
 
-const myCourses = ["Creative Writing for Geniuses", "Coding for Literary Minds ", "UI Design Fundamentals "]
+//const valuation = "This is a value, I suppose."
+
+//console.log(valuation)
+ const myCourses = ["How to Fly", "How to Let Go"]
+
+ localStorage.setItem("myCourses", JSON.stringify(myCourses))
+//const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
+ domEl.textContent = myCourses
 
 
-function listCourses(arr){
-    let listItems = ""
-    for(let i =0; i < arr.length; i++){
-        listItems += `
-
-        <li>
-            ${arr[i]}
-
-        </li>
-
-        `
-       
-    }
-    domEl.innerHTML =listItems
-}
 
 
-myCourses.push("Claudius was a Wanker!")
 
-localStorage.setItem("myCourses", JSON.stringify(myCourses))
-listCourses(myCourses)
-
-
-// inputBtn.addEventListener("click", function() {
-//     myLeads.push(inputEl.value)
-//     inputEl.value = ""
-//     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-//     render(myLeads)
-// })
