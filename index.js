@@ -9,23 +9,9 @@ const domEl = document.getElementById("dom-el")
 
 // domEl.textContent = leadsFromLocalStorage
 
-const flight = JSON.parse( localStorage.getItem("myCourses") )
-listItems = ""
-for (let i = 0; i < flight.length; i++){
-    listItems += `
-        <li>
-
-            ${flight[i]}
-
-        </li>
-
-    `
-
-}
-
-
-
-domEl.innerHTML = listItems
+let please = localStorage.setItem("flox", 45)
+let pool = localStorage.getItem("flox")
+domEl.textContent = pool
 
 
 
