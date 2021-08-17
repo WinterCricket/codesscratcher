@@ -9,10 +9,12 @@ const domEl = document.getElementById("dom-el")
 
 // domEl.textContent = leadsFromLocalStorage
 
-let please = localStorage.setItem("flox", 45)
-let pool = localStorage.getItem("flox")
-domEl.textContent = pool
-
-
+let myCourses = ["Promises in the Short Story", "Significance in Fiction", "Escalation and tension", "Poetics of description"]
+function listCourses(arr){
+for( let i = 0; i < arr.length; i++){
+    console.log(arr[i])
+}
+}
+listCourses(myCourses)
 
 
