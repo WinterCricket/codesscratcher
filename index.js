@@ -23,6 +23,11 @@ let data = [
     {
         player: "Mark",
         score: 48
+    },
+
+    {
+        player: "Jonah",
+        score: 38
     }
 ]
 
