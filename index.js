@@ -9,22 +9,20 @@ const domEl = document.getElementById("dom-el")
 
 // domEl.textContent = leadsFromLocalStorage
 
-const description = "The countries with the best health care are "
+const description = " countries with the best health care "
 const array = ["Norway ", "Denmark ", "Netherlands"]
 
 function generateSentence(desc, arr){
-    let sentence = ""
-    let list = [].toString()
-    for( let i = 0; i < arr.length; i++){
-        list += arr[i]+", "
-        //console.log(list)
-        sentence = `
-        ${desc} ${list}
-
-        `
-        console.log(sentence)
+    let baseString = `The ${arr.length} ${desc} are`
+    const lastIndex = arr.length -1
+    for(let i=0; i <arr.length; i++){
+        if(i === lastIndex){
+            baseString += arr[i]
+        }else{
+        baseString+= arr[i]+", "
     }
-    domEl.textContent = sentence
+    }
+    // domEl.textContent = baseString
+    console.log(baseString)
 }
-
 generateSentence(description, array)
