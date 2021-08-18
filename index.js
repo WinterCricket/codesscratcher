@@ -14,7 +14,7 @@ const array = ["Norway ", "Denmark ", "Netherlands"]
 
 function generateSentence(desc, arr){
     let sentence = ""
-    let list = []
+    let list = [].toString()
     for( let i = 0; i < arr.length; i++){
         list += arr[i]+", "
         //console.log(list)
