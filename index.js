@@ -9,11 +9,11 @@ const domEl = document.getElementById("dom-el")
 
 // domEl.textContent = leadsFromLocalStorage
 
-const description = " countries with the best health care "
-const array = ["Norway ", "Denmark ", "Netherlands"]
+const description = "countries with the best health care"
+const array = ["Norway", "Denmark", "Netherlands"]
 
 function generateSentence(desc, arr){
-    let baseString = `The ${arr.length} ${desc} are`
+    let baseString = `The ${arr.length} ${desc} are `
     const lastIndex = arr.length -1
     for(let i=0; i <arr.length; i++){
         if(i === lastIndex){
@@ -22,7 +22,7 @@ function generateSentence(desc, arr){
         baseString+= arr[i]+", "
     }
     }
-    // domEl.textContent = baseString
-    console.log(baseString)
+    domEl.textContent = baseString
+    
 }
 generateSentence(description, array)
