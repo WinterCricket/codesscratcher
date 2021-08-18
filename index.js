@@ -8,32 +8,23 @@ const domEl = document.getElementById("dom-el")
 // const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 
 // domEl.textContent = leadsFromLocalStorage
-const scoreBtn = document.getElementById("score-btn")
 
+const description = "The countries with the best health care are "
+const array = ["Norway ", "Denmark ", "Netherlands"]
 
+function generateSentence(desc, arr){
+    let sentence = ""
+    let list = []
+    for( let i = 0; i < arr.length; i++){
+        list += arr[i]+", "
+        //console.log(list)
+        sentence = `
+        ${desc} ${list}
 
-let data = [
-
-    {
-        player: "Jane",
-        score: 52
-    },
-
-
-    {
-        player: "Mark",
-        score: 48
-    },
-
-    {
-        player: "Jonah",
-        score: 38
+        `
+        console.log(sentence)
     }
-]
+    domEl.textContent = sentence
+}
 
-scoreBtn.addEventListener("click", function() {
-    
-    const jane = data[0].score
-    domEl.textContent = jane
-    
-})
+generateSentence(description, array)
