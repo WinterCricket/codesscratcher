@@ -14,7 +14,7 @@ function renderImage(){
 let imageItem = ""
 for(let i = 0; i < imgs.length; i++){
     imageItem += `
-       <img src=" ${imgs[i]}" alt="">
+       <img class="team-image" src=" ${imgs[i]}" alt="photos of models">
 
     `
 }
@@ -22,4 +22,4 @@ for(let i = 0; i < imgs.length; i++){
 
 domEl.innerHTML = imageItem
 }
-renderImage(imgs.push("images/image4.png"))
+renderImage(imgs.unshift("images/image4.png"))
