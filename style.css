@@ -83,3 +83,9 @@ button {
  	color: blue;
  }
  
+
+ img {
+
+    height:  150px;
+    border-radius: 50%;
+ }

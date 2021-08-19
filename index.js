@@ -1,28 +1,24 @@
 
+let domEl = document.getElementById("dom-el")
 
+const imgs = [
+    "images/image1.png",
+    "images/image2.png",
+    "images/image3.png"
 
-const domEl = document.getElementById("dom-el")
+]
 
-//const valuation = "This is a value, I suppos
+function renderImage(){
 
-// const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
+let imageItem = ""
+for(let i = 0; i < imgs.length; i++){
+    imageItem += `
+       <img src=" ${imgs[i]}" alt="">
 
-// domEl.textContent = leadsFromLocalStorage
-
-const description = "countries with the best health care"
-const array = ["Norway", "Denmark", "Netherlands"]
-
-function generateSentence(desc, arr){
-    let baseString = `The ${arr.length} ${desc} are `
-    const lastIndex = arr.length -1
-    for(let i=0; i <arr.length; i++){
-        if(i === lastIndex){
-            baseString += arr[i]
-        }else{
-        baseString+= arr[i]+", "
-    }
-    }
-    domEl.textContent = baseString
-    
+    `
 }
-generateSentence(description, array)
+
+
+domEl.innerHTML = imageItem
+}
+renderImage()
