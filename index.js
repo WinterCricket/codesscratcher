@@ -4,7 +4,8 @@ let domEl = document.getElementById("dom-el")
 const imgs = [
     "images/image1.png",
     "images/image2.png",
-    "images/image3.png"
+    "images/image3.png",
+
 
 ]
 
@@ -21,4 +22,4 @@ for(let i = 0; i < imgs.length; i++){
 
 domEl.innerHTML = imageItem
 }
-renderImage()
+renderImage(imgs.push("images/image4.png"))
