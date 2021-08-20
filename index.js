@@ -1,5 +1,6 @@
 
 let domEl = document.getElementById("dom-el")
+let ecmaEl = document.getElementById("ecma-el")
 
 const imgs = [
     "images/image1.png",
@@ -23,3 +24,27 @@ for(let i = 0; i < imgs.length; i++){
 domEl.innerHTML = imageItem
 }
 renderImage(imgs.unshift("images/image4.png"))
+
+let colors = ["blue", "green", "red", "yellow"]
+// function renderColors(){
+
+//  let list = ""
+// for (let j = 0; j < colors.length; j++){
+//     list += `
+//         <li> ${colors[j]} </li>
+//     `
+
+// }
+// ecmaEl.innerHTML = list
+// }
+// renderColors()
+
+colors.forEach(function(color){
+    
+   ecmaEl.innerHTML += `<li> 
+    ${color} 
+    </li>`
+})
+
+ 
+
