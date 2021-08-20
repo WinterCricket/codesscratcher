@@ -28,6 +28,7 @@ renderImage(imgs.unshift("images/image4.png"))
 let colors = ["blue", "green", "red", "yellow"]
 // function renderColors(){
 
+
 //  let list = ""
 // for (let j = 0; j < colors.length; j++){
 //     list += `
@@ -42,9 +43,11 @@ let colors = ["blue", "green", "red", "yellow"]
 colors.forEach(function(color){
     
    ecmaEl.innerHTML += `<li> 
-    ${color} 
+    Here's this color: ${color} 
     </li>`
+
+
 })
 
  
-
+colors.push("orange")
