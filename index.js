@@ -25,14 +25,16 @@ domEl.innerHTML = imageItem
 }
 renderImage(imgs.unshift("images/image4.png"))
 
-let sum = 0
+
 
 let numbers = [1, 2, 3, 8]
 // function renderColors(){
+let sum = 0
 
-function adder(number){
+
+
+numbers.forEach(function(number){
     sum += number
-}
+})
 
-numbers.forEach(adder)
-ecmaEl.textContent = sum
+console.log(sum)
