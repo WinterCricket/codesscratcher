@@ -28,7 +28,7 @@ renderImage(imgs.unshift("images/image4.png"))
 let colors = ["blue", "green", "red", "yellow"]
 // function renderColors(){
 
-function addToArray(item){
+function addToArray(...item){
     colors.push(item)
 
     colors.forEach(function(color){
@@ -54,4 +54,5 @@ function addToArray(item){
 
 
  
-addToArray("purple")
+addToArray("purple", " orange", " lightblue ")
+
