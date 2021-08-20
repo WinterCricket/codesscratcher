@@ -1,7 +1,7 @@
 
 let domEl = document.getElementById("dom-el")
+let listEl = document.getElementById("list-el")
 let ecmaEl = document.getElementById("ecma-el")
-
 const imgs = [
     "images/image1.png",
     "images/image2.png",
@@ -25,34 +25,14 @@ domEl.innerHTML = imageItem
 }
 renderImage(imgs.unshift("images/image4.png"))
 
-let colors = ["blue", "green", "red", "yellow"]
+let sum = 0
+
+let numbers = [1, 2, 3, 8]
 // function renderColors(){
 
-function addToArray(...item){
-    colors.push(item)
-
-    colors.forEach(function(color){
-    
-   ecmaEl.innerHTML += `<li> 
-    Here's this color: ${color} 
-    </li>`
-
-
-})
+function adder(number){
+    sum += number
 }
-//  let list = ""
-// for (let j = 0; j < colors.length; j++){
-//     list += `
-//         <li> ${colors[j]} </li>
-//     `
 
-// }
-// ecmaEl.innerHTML = list
-// }
-// renderColors()
-
-
-
- 
-addToArray("purple", " orange", " lightblue ")
-
+numbers.forEach(adder)
+ecmaEl.textContent = sum
