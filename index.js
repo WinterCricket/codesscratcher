@@ -28,7 +28,18 @@ renderImage(imgs.unshift("images/image4.png"))
 let colors = ["blue", "green", "red", "yellow"]
 // function renderColors(){
 
+function addToArray(item){
+    colors.push(item)
 
+    colors.forEach(function(color){
+    
+   ecmaEl.innerHTML += `<li> 
+    Here's this color: ${color} 
+    </li>`
+
+
+})
+}
 //  let list = ""
 // for (let j = 0; j < colors.length; j++){
 //     list += `
@@ -40,14 +51,7 @@ let colors = ["blue", "green", "red", "yellow"]
 // }
 // renderColors()
 
-colors.forEach(function(color){
-    
-   ecmaEl.innerHTML += `<li> 
-    Here's this color: ${color} 
-    </li>`
 
-
-})
 
  
-colors.push("orange")
+addToArray("purple")
