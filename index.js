@@ -1,7 +1,7 @@
 
-let domEl = document.getElementById("dom-el")
-let listEl = document.getElementById("list-el")
-let ecmaEl = document.getElementById("ecma-el")
+const domEl = document.getElementById("dom-el")
+const listEl = document.getElementById("list-el")
+const ecmaEl = document.getElementById("ecma-el")
 const imgs = [
     "images/image1.png",
     "images/image2.png",
@@ -36,23 +36,32 @@ renderImage(imgs.unshift("images/image4.png"))
 // }
 
 // numbers.forEach(adder)
-var paints = [
+const products = [
 
-    {color: 'red'},
+    {product: "ice cream", type: "dairy"},
 
-    {color: 'blue'},
+    {product: "steak", type: "meat"},
 
-    {color: 'yellow'}
+    {product: "blueberries", type: "fruit"},
 
-];
+    {product: "potatoes", type: "vegetable"},
 
-function pluck(array, property){
+    {product: "apples", type: "fruit"}
 
-   let properties = array.map(function(object){
-    return object[property]
-})
-    return properties 
+]
+
+let filteredProducts = []
+
+
+    
+for (let i = 0; i < products.length; i++){
+    if( products[i].type === "fruit"){
+        filteredProducts.push(products[i].product)
+    
+        
 }
-let prop = pluck(paints, "color")
+  
 
-ecmaEl.textContent = prop
+  }      
+
+ ecmaEl.textContent = filteredProducts
