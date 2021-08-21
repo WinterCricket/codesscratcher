@@ -39,10 +39,10 @@ renderImage(imgs.unshift("images/image4.png"))
 const numbers = [1,2,3,4]
 
 let doubleNumbers = []
+function doubleNum(number){
+    doubleNumbers.push(number * 2)
+}
 
-numbers.forEach(function(number){
-    let flee = number *2
-    doubleNumbers.push(flee)
-})
+numbers.map(doubleNum)
 
 ecmaEl.textContent = doubleNumbers
