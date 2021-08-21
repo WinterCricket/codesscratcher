@@ -48,12 +48,11 @@ var paints = [
 
 function pluck(array, property){
 
-var properties = array.map(function(object){
-    return object[property];
-});
-  return properties;
+   let properties = array.map(function(object){
+    return object[property]
+})
+    return properties 
 }
-
-let prop = pluck(paints, 'color');
+let prop = pluck(paints, "color")
 
 ecmaEl.textContent = prop
