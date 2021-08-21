@@ -38,11 +38,10 @@ renderImage(imgs.unshift("images/image4.png"))
 // numbers.forEach(adder)
 const numbers = [1,2,3,4]
 
-let doubleNumbers = []
-function doubleNum(number){
-    doubleNumbers.push(number * 2)
-}
 
-numbers.map(doubleNum)
 
-ecmaEl.textContent = doubleNumbers
+let doubled = numbers.map(function(number){
+    return number * 2
+})
+
+ecmaEl.textContent = doubled
