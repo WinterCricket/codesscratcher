@@ -36,12 +36,24 @@ renderImage(imgs.unshift("images/image4.png"))
 // }
 
 // numbers.forEach(adder)
-const numbers = [1,2,3,4]
+var paints = [
 
+    {color: 'red'},
 
+    {color: 'blue'},
 
-let doubled = numbers.map(function(number){
-    return number * 2
-})
+    {color: 'yellow'}
 
-ecmaEl.textContent = doubled
+];
+
+function pluck(array, property){
+
+var properties = array.map(function(object){
+    return object[property];
+});
+  return properties;
+}
+
+let prop = pluck(paints, 'color');
+
+ecmaEl.textContent = prop
