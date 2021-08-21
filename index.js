@@ -36,14 +36,13 @@ renderImage(imgs.unshift("images/image4.png"))
 // }
 
 // numbers.forEach(adder)
-var images = [
-  { height: 10, width: 30 },
-  { height: 20, width: 90 },
-  { height: 54, width: 32 }
-];
-var areas = [];
-images.forEach(function(image){
-    areas.push(image.height * image.width);
-});
+const numbers = [1,2,3,4]
 
-listEl.textContent = areas;
+let doubleNumbers = []
+
+numbers.forEach(function(number){
+    let flee = number *2
+    doubleNumbers.push(flee)
+})
+
+ecmaEl.textContent = doubleNumbers
