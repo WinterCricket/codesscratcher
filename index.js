@@ -50,18 +50,7 @@ const products = [
 
 ]
 
-let filteredProducts = []
-
-
-    
-for (let i = 0; i < products.length; i++){
-    if( products[i].type === "fruit"){
-        filteredProducts.push(products[i].product)
-    
-        
-}
-  
-
-  }      
-
- ecmaEl.textContent = filteredProducts
+const filteredProducts = products.filter(function(product){
+    return product.type === "fruit"
+})
+ ecmaEl.innerHTML = JSON.stringify(filteredProducts)
