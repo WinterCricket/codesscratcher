@@ -42,10 +42,11 @@ const users = [
 {name: "Recotor"}
 
 ]
-
+user = ""
 for(let i = 0; i < users.length; i++){
     if(users[i].name === "Flannigan" || users[i].name === "Recotor"){
         
-        console.log(users[i].name)
+        user += users[i].name
 }
 }
+ecmaEl.textContent = user
