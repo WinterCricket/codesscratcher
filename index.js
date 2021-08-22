@@ -36,21 +36,11 @@ renderImage(imgs.unshift("images/image4.png"))
 // }
 
 // numbers.forEach(adder)
-const products = [
+function reject(array, iteratorFunction) {
 
-    {product: "ice cream", type: "dairy"},
+    return array.filter(item => !array.filter(iteratorFunction).includes(item));
 
-    {product: "steak", type: "meat"},
+}
+let play = reject([10, 20, 30], function(item){return item === 10});
 
-    {product: "blueberries", type: "fruit"},
-
-    {product: "potatoes", type: "vegetable"},
-
-    {product: "apples", type: "fruit"}
-
-]
-
-const filteredProducts = products.filter(function(product){
-    return product.type === "fruit"
-})
- ecmaEl.innerHTML = JSON.stringify(filteredProducts)
+ecmaEl.textContent = play
