@@ -39,16 +39,19 @@ renderImage(imgs.unshift("images/image4.png"))
 const users = [
 {name: "Bjoork"},
 {name: "Flannigan"},
-{name: "Recotor"}
+{name: "Recotor"},
+{name: "Flannigan"}
 
 ]
+
+
 let user = ""
-for(let i = 0; i < users.length; i++){
-    if(users[i].name === "Flannigan" || users[i].name === "Recotor"){
-        
-        user += `<li>
-        ${users[i].name}
-        </li>`
+
+for (let i = 0; i < users.length; i++){
+    if(users[i].name === "Flannigan"){
+        user = users[i]
+        break
+    }
 }
-}
-ecmaEl.innerHTML = user
+
+ecmaEl.textContent = user.name
