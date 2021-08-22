@@ -36,11 +36,16 @@ renderImage(imgs.unshift("images/image4.png"))
 // }
 
 // numbers.forEach(adder)
-function reject(array, iteratorFunction) {
+const users = [
+{name: "Bjoork"},
+{name: "Flannigan"},
+{name: "Recotor"}
 
-    return array.filter(item => !array.filter(iteratorFunction).includes(item));
+]
 
+for(let i = 0; i < users.length; i++){
+    if(users[i].name === "Flannigan" || users[i].name === "Recotor"){
+        
+        console.log(users[i].name)
 }
-let play = reject([10, 20, 30], function(item){return item === 10});
-
-ecmaEl.textContent = play
+}
