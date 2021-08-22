@@ -36,17 +36,17 @@ renderImage(imgs.unshift("images/image4.png"))
 // }
 
 // numbers.forEach(adder)
-const users = [
-{name: "Bjoork"},
-{name: "Flannigan"},
-{name: "Recotor"},
-{name: "Flannigan"}
+const dancers = [
+  { name: "Sid", age: 17 },
+  { name: "Baggy", age: 21 },
+  { name:"Irish", age: 67 }
+];
+let legal =
 
-]
 
 
-let stand = users.find(function(user){
-    return user.name === "Recotor"
+dancers.every(function(dancer){
+    return dancer.age > 20
 })
 
-ecmaEl.textContent = stand.name
+ecmaEl.textContent = legal
