@@ -49,4 +49,17 @@ dancers.every(function(dancer){
     return dancer.age > 20
 })
 
-ecmaEl.textContent = legal
+//ecmaEl.textContent = legal
+
+let ages = []
+function findYoungest(){
+dancers.forEach(function(dancer){
+    return ages.push(dancer.age)
+})
+let context = ages.sort(function(a,b){return a-b})
+
+
+ecmaEl.textContent = context[0]
+}
+findYoungest()
+
