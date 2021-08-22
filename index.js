@@ -45,13 +45,8 @@ const users = [
 ]
 
 
-let user = ""
+let stand = users.find(function(user){
+    return user.name === "Recotor"
+})
 
-for (let i = 0; i < users.length; i++){
-    if(users[i].name === "Flannigan"){
-        user = users[i]
-        break
-    }
-}
-
-ecmaEl.textContent = user.name
+ecmaEl.textContent = stand.name
