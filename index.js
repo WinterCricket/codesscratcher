@@ -69,15 +69,15 @@ renderImage(imgs.unshift("images/image4.png"))
 // console.log(result)
 // }
 // findYoungest()
-function countdown(n) {
-  if (n < 1) {
-    return [];
-  } else {
-    
-    let arr = countdown(n - 1);
-    arr.unshift(n);
-    return arr;
-  }
-}
 
-console.log(countdown(8));
+function rangeOfNumbers(startNum, endNum) {
+    if(endNum - startNum <= 0){
+        return [startNum];
+    } else {
+        let numbers = rangeOfNumbers(startNum, endNum -1);
+        numbers.push(endNum);
+        return numbers;
+    }
+  
+};
+console.log(rangeOfNumbers(1, 5));
