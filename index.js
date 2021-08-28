@@ -70,14 +70,25 @@ renderImage(imgs.unshift("images/image4.png"))
 // }
 // findYoungest()
 
-function rangeOfNumbers(startNum, endNum) {
-    if(endNum - startNum <= 0){
-        return [startNum];
-    } else {
-        let numbers = rangeOfNumbers(startNum, endNum -1);
-        numbers.push(endNum);
-        return numbers;
-    }
-  
+const str = 'Jumping jack-ass';
+const getMap = (legend, shift) => {
+   return legend.reduce((charsMap, currentChar, charIndex) => {
+      const copy = { ...charsMap };
+      let ind = (charIndex + shift) % legend.length;
+      if (ind < 0) {
+         ind += legend.length;
+      };
+      copy[currentChar] = legend[ind];
+      return copy;
+   }, {});
 };
-console.log(rangeOfNumbers(1, 5));
+const encrypt = (str, shift = 0) => {
+   const legend = 'abcdefghijklmnopqrstuvwxyz'.split('');
+   const map = getMap(legend, shift);
+   return str
+   .toLowerCase()
+   .split('')
+   .map(char => map[char] || char)
+   .join('');
+};
+console.log(encrypt(str, 6));
