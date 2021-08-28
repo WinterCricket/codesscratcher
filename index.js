@@ -69,13 +69,15 @@ renderImage(imgs.unshift("images/image4.png"))
 // console.log(result)
 // }
 // findYoungest()
-let birds = [2,3,4,5];
-function sum(arr, n) {
-    if (n <= 0) {
-      return 0;
-    } else {
-      return sum(arr, n -1 ) + arr[n - 1];
-    }
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    
+    let arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
   }
+}
 
-  console.log(sum(birds, 3));
+console.log(countdown(8));
