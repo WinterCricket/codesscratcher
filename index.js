@@ -36,30 +36,46 @@ renderImage(imgs.unshift("images/image4.png"))
 // }
 
 // numbers.forEach(adder)
-const dancers = [
-  { name: "Sid", age: 17 },
-  { name: "Baggy", age: 21 },
-  { name:"Irish", age: 67 }
-];
-let legal =
+// const dancers = [
+//   { name: "Sid", age: 17 },
+//   { name: "Baggy", age: 21 },
+//   { name:"Irish", age: 67 }
+// ];
+// let legal =
 
 
 
-dancers.every(function(dancer){
-    return dancer.age > 20
-})
+// dancers.every(function(dancer){
+//     return dancer.age > 20
+// })
 
-//ecmaEl.textContent = legal
+// //ecmaEl.textContent = legal
 
-let ages = []
-function findYoungest(){
-dancers.forEach(function(dancer){
-    return ages.push(dancer.age)
-})
-let context = ages.sort(function(a,b){return a-b})
+// let ages = []
+// function findYoungest(){
+// dancers.forEach(function(dancer){
+//     return ages.push(dancer.age)
+// })
+// let context = ages.sort(function(a,b){return a-b})
 
 
-ecmaEl.textContent = context[0]
-}
-findYoungest()
+// let years = context[0]
 
+// let result = context.filter(obj => {
+//   return obj.age === years
+  
+// })
+// //ecmaEl.textContent = result.name
+// console.log(result)
+// }
+// findYoungest()
+let birds = [2,3,4,5];
+function sum(arr, n) {
+    if (n <= 0) {
+      return 0;
+    } else {
+      return sum(arr, n -1 ) + arr[n - 1];
+    }
+  }
+
+  console.log(sum(birds, 3));
